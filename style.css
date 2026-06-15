@@ -1,1 +1,168 @@
+/* Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+body {
+    background-color: #1e1b18;
+    color: #f4ebd9;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #2b261f;
+    text-align: center;
+    padding: 3rem 1rem;
+    border-bottom: 4px solid #8b5a2b;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #d4a373;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #e9c46a;
+}
+
+/* Layout Principal */
+.container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+/* Grid de Cards (Responsivo) */
+.grid-animais {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+/* Estilização dos Cards */
+.card {
+    background-color: #2b2520;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+    transition: transform 0.3s ease;
+    border: 1px solid #3d352e;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+/* Espaço para Imagens (Usando gradientes modernos como base) */
+.card-img {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.t-rex { background-image: linear-gradient(135deg, #5c677d, #22223b); }
+.mamute { background-image: linear-gradient(135deg, #8a5a44, #4a3728); }
+.megalodon { background-image: linear-gradient(135deg, #2a6f97, #012a4a); }
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    color: #e9c46a;
+    margin-bottom: 0.6rem;
+    font-size: 1.4rem;
+}
+
+.card-content p {
+    color: #ccc;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    height: 50px; /* Garante alinhamento dos botões */
+}
+
+/* Botões */
+.btn-fact {
+    background-color: #e76f51;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: background 0.2s;
+}
+
+.btn-fact:hover {
+    background-color: #f4a261;
+}
+
+/* Janela Modal (Popup) */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background-color: #3d352e;
+    padding: 2.5rem;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    text-align: center;
+    border: 2px solid #e9c46a;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.8);
+}
+
+.modal-content h2 {
+    color: #e9c46a;
+    margin-bottom: 1rem;
+}
+
+.modal-content p {
+    font-size: 1.1rem;
+    color: #f4ebd9;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2rem;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #fff;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #151210;
+    color: #666;
+    margin-top: 5rem;
+    font-size: 0.9rem;
+}
